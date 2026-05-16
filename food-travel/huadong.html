@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>江南味道 - 华东美食巡礼</title>
+    <style>
+        :root {
+            --primary-color: #2A5CAA; /* 森林绿 */
+            --secondary-color: #D14334; /* 珊瑚红 */
+            --accent-color: #8A6D46; /* 靛蓝 */
+            --text-color: #444;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+        }
+
+        body {
+            
+        }
+
+        /* 动态导航栏 */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 1.2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .logo {
+            font-size: 2.2rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* 主视觉区 */
+        .hero {
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            padding-top: 80px;
+            background: linear-gradient(rgba(34, 139, 34, 0.1), rgba(34, 139, 34, 0.05)),
+                        url('img/huadong.jpg') center/cover;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -50px;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 500 150" xmlns="http://www.w3.org/2000/svg"><path d="M0 70 L250 20 L500 70 V150 H0 Z" fill="white"/></svg>');
+        }
+
+        /* 特色美食展示 */
+        .specialty-section {
+            max-width: 1280px;
+            margin: 5rem auto;
+            padding: 0 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--secondary-color);
+        }
+
+        /* 瀑布流布局 */
+        .masonry-grid {
+            column-count: 3.54;
+            column-gap: 2rem;
+        }
+
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 2rem;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: transform 0.4s;
+        }
+
+        .masonry-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .food-card {
+            position: relative;
+        }
+
+        .food-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--secondary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+        }
+
+        .food-image {
+            height: 280px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .food-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s;
+        }
+
+        .food-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .food-info {
+            padding: 1.5rem;
+        }
+
+        .food-name {
+            font-size: 1.4rem;
+            color: var(--text-color);
+            margin-bottom: 0.8rem;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 1024px) {
+            .masonry-grid {
+                column-count: 2;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                height: 70vh;
+            }
+
+            .masonry-grid {
+                column-count: 1;
+            }
+
+            .logo {
+                font-size: 1.8rem;
+            }
+        }
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-links">
+            	<a href="#home">顶部</a>
+                <a href="#featured" class="nav-item">招牌推荐</a>
+                <a href="index.html">返回首页</a>
+
+            </div>
+          
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1 style="visibility: hidden;">寻味江南传统美食</h1>
+           
+        </div>
+    </section>
+
+    <section class="specialty-section" id="featured">
+        <h2 class="section-title">寻味江南传统美食</h2>
+        <div class="masonry-grid">
+          
+            </article>
+
+          
+            <article class="masonry-item food-card">
+                <div class="food-badge">上海小笼包</div>
+                <div class="food-image">
+                    <img src="img/xlb.jpg" alt="佛跳墙">
+                </div>
+                <div class="food-info">
+                    <h3 class="food-name">南翔小笼包</h3>
+                    <p>十八道褶传统工艺，薄皮汤汁，配以姜丝香醋的经典吃法</p>
+                </div>
+            </article>
+
+          
+            <article class="masonry-item food-card">
+                <div class="food-badge">杭州东坡肉</div>
+                <div class="food-image">
+                    <img src="img/bpr.jpg" alt="文昌鸡">
+                </div>
+                <div class="food-info">
+                    <h3 class="food-name">东坡肉</h3>
+                    <p>文火慢炖的五花肉，色泽红亮，肥而不腻，瘦而不柴</p>
+                </div>
+            </article>
+
+           
+            <article class="masonry-item food-card">
+                <div class="food-badge">南京盐水鸭 </div>
+                <div class="food-image">
+                    <img src="img/ysy.jpg" alt="螺蛳粉">
+                </div>
+                <div class="food-info">
+                    <h3 class="food-name">金陵盐水鸭</h3>
+                    <p>桂花盐水腌制，皮白肉嫩，咸香适口，南京代表美食</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+</body>
+</html>

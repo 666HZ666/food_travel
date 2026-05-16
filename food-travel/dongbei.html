@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>品味东北 - 东北美食之旅</title>
+    <style>
+        :root {
+            --primary-color: #8B0000; /* 深红色 */
+            --secondary-color: #FFD700; /* 金色 */
+            --accent-color: #4B5320; /* 军绿色 */
+            --text-color: #333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', '微软雅黑', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+
+        /* 导航栏 */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        /* 主内容区 */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                        url('img/221.jpg') center/cover;
+            color: white;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        /* 美食卡片 */
+        .food-grid {
+            width: 1200px;
+            margin: 4.5rem auto;
+            padding: 0 2rem;
+            display: grid;
+            gap: 2rem;
+            
+        }
+
+        .food-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .food-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .food-image {
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .food-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .food-card:hover .food-image img {
+            transform: scale(1.1);
+        }
+
+        .food-info {
+            padding: 1.5rem;
+        }
+
+        .food-title {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .food-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            
+            <div class="nav-links">
+                <a href="#home">顶部</a>
+                <a href="#dishes">特色美食</a>
+                <a href="index.html">返回首页</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>东北美食殿堂</h1>
+            <p>传承关东味道，品味家的温暖</p>
+        </div>
+    </section>
+
+    <section class="food-grid" id="dishes">
+     
+        
+        	<article class="food-card">
+            <div class="food-image">
+                <img src="img/99.jpg" alt="锅包肉">
+            </div>
+            <div class="food-info">
+                <h3 class="food-title">锅包肉</h3>
+                <p>东北经典糖醋里脊变种，外酥里嫩，酸甜可口，金黄酥脆的外皮包裹着多汁的里脊肉，每一口都充满浓郁的东北风味。</p>
+            </div>
+        </article>
+       
+       
+
+       
+        <article class="food-card">
+            <div class="food-image">
+                <img src="img/baicai.jpg" alt="酸菜白肉锅">
+            </div>
+            <div class="food-info">
+                <h3 class="food-title">酸菜白肉锅</h3>
+                <p>东北冬季必备暖身菜，酸香浓郁的酸菜搭配鲜嫩的五花肉，佐以粉丝和冻豆腐，汤鲜味美，充满农家风味。</p>
+            </div>
+        </article>
+        
+
+       
+         
+        <article class="food-card">
+            <div class="food-image">
+                <img src="img/luandun.jpeg" alt="东北乱炖">
+            </div>
+            <div class="food-info">
+                <h3 class="food-title">东北乱炖</h3>
+                <p>集多种食材于一锅的豪放做法，豆角、土豆、茄子、玉米等炖至软烂，酱香浓郁，体现东北人热情豪爽的饮食文化。</p>
+            </div>
+        </article>
+       
+    </section>
+
+      
+        
+    </section>
+
+  
+</body>
+</html>

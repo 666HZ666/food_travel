@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>养生佳品 - 泡椒芹菜牛肉</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('img/pjqc.jpg') center/cover;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .nav {
+            background: #2c3e50;
+            padding: 20px;
+            position: sticky;
+            top: 0;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 25px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav a:hover {
+            color: #e67e22;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .section {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            margin: 30px 0;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #e67e22;
+            border-left: 5px solid #2c3e50;
+            padding-left: 15px;
+            margin: 30px 0;
+        }
+
+        .history-timeline {
+            border-left: 3px solid #e67e22;
+            padding-left: 30px;
+            margin-left: 15px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -38px;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            background: #e67e22;
+            border-radius: 50%;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 768px) {
+            .nav {
+                text-align: center;
+            }
+            .nav a {
+                display: block;
+                margin: 10px 0;
+            }
+            h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+    <link href="img/pjqc.jpg" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <h1>泡椒芹菜牛肉</h1>
+        <p>传统养生与现代美食的完美结合</p>
+    </header>
+
+    <nav class="nav">
+        <a href="#做法">经典做法</a>
+        <a href="#功效">养生功效</a>
+        <a href="#历史">历史渊源</a>
+        <a href="index.html">返回首页</a>
+    </nav>
+
+    <div class="container">
+        <section class="section" id="做法">
+            <h2>传统制作工艺</h2>
+            <ul>
+                <li>精选牛腱肉500克，冷水浸泡2小时去血水</li>
+                <li>老坛泡脚200克（含原汁），芹菜150克切段</li>
+                <li>牛肉冷水下锅，加入姜片、料酒焯水</li>
+                <li>砂锅慢炖2小时，加入泡脚和芹菜再炖30分钟</li>
+                <li>最后淋上热油激香，撒上香菜点缀</li>
+            </ul>
+        </section>
+
+        <section class="section" id="功效">
+            <h2>养生功效</h2>
+            <div class="benefits-grid">
+                <p>✅ 温中散寒，改善血液循环</p>
+                <p>✅ 富含蛋白质和膳食纤维</p>
+                <p>✅ 泡椒中的乳酸菌促进消化</p>
+                <p>✅ 芹菜素有助于降低血压</p>
+            </div>
+        </section>
+
+        <section class="section" id="历史">
+            <h2>历史传承</h2>
+            <div class="history-timeline">
+                <div class="timeline-item">
+                    <h3>明清时期</h3>
+                    <p>起源于川东地区的农家菜，最初作为冬季御寒食疗方</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>民国时期</h3>
+                    <p>经重庆码头工人改良，加入更多辛香料形成现代雏形</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>21世纪</h3>
+                    <p>入选省级非物质文化遗产，成为川菜代表菜之一</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>

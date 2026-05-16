@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="renderer" content="webkit">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <script type="text/javascript" src="/static/pixi.min.js"></script>
+  <script type="text/javascript" src="/static/main.js"></script>
+  <link rel="stylesheet" href="/static/font.css">
+  <title>个人主页</title>
+  <style>
+    canvas {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -2;
+      pointer-events: none
+    }
+a:hover,
+a:link,
+a:visited,
+a:active,
+a:focus {
+    text-decoration: none;
+   
+}
+
+button,
+input,
+input:focus {
+    outline: none;
+    border: none;
+
+}
+
+a,
+button,
+input {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+*{
+
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* 其他浏览器 */
+}
+
+    * {
+      box-sizing: border-box;
+      -webkit-text-size-adjust: none
+    }
+
+    img {
+      border: 0;
+      vertical-align: middle
+    }
+
+
+    body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background: radial-gradient(#619bff, #e0e0e3);
+}
+
+    .main {
+      width: 35%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @media screen and (max-width:1024px) {
+      .main {
+        width: 45%;
+      }
+    }
+
+    @media screen and (max-width:768px) {
+      .main {
+        width: 50%;
+      }
+    }
+
+    @media screen and (max-width:540px) {
+      .main {
+        width: 60% !important;
+      }
+    }
+
+    @media screen and (max-width:480px) {
+      .main {
+        width: 90% !important;
+      }
+    }
+
+    @media screen and (max-width:360px) {
+      .main {
+        width: 100% !important;
+      }
+    }
+
+
+    img {
+      border: 3px solid rgba(255, 255, 255, 0.8);
+      border-radius: 50%;
+      box-shadow:0 0px 20px 5px #e6e8ea;
+      transition: .4s ease-in-out;
+    }
+
+    h1 {
+
+  font-family: 'Noto Serif SC', serif;
+      color: #fff;
+      font-size: 1.8rem;
+      line-height: 2em;
+      font-weight: 800;
+    }
+
+    h2 {
+      margin: 0;
+      color: #ffffffa3;
+      padding-bottom: 45px;
+      font-size: 18px;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      position: relative;
+      list-style-type: none;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      width: 100%;
+      -ms-flex-pack: distribute;
+      justify-content: space-around;
+      border-bottom: 2px solid hsla(0, 0%, 100%, .1);
+      border-top: 2px solid hsla(0, 0%, 100%, .1);
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 85%
+    }
+
+    li {
+      display: flex;
+      transition: all .2s;
+      width: 100%;
+      border-left: 1px solid hsla(0, 0%, 100%, .1);
+      border-right: 1px solid hsla(0, 0%, 100%, .1);
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center
+    }
+
+    a {
+      font-size: 1.2rem;
+      color: #ffffff;
+      transition: all .2s;
+     
+      cursor: pointer;
+    }
+
+    a:hover {
+      color: #fff !important;
+       text-shadow:0 0px 20px  #ffffff;
+    }
+    {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+           
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        /* 容器样式 */
+        .select-container {
+            width: 90%;
+            max-width: 400px;
+            margin: 20px;
+        }
+
+        /* 标签样式 */
+        .select-label {
+            display: block;
+            margin-bottom: 12px;
+            color: #2c3e50;
+            font-size: 1.1rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        /* 下拉列表主体 */
+        .custom-select {
+            width: 100%;
+            padding: 15px 50px 15px 20px;
+            border: none;
+            border-radius: 12px;
+            background: linear-gradient(145deg, #ffffff, #f0f0f0);
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.1),
+                       -5px -5px 15px rgba(255,255,255,0.8);
+            font-size: 16px;
+            color: #34495e;
+            appearance: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        /* 鼠标悬停效果 */
+        .custom-select:hover {
+            background: linear-gradient(145deg, #f8f9fa, #e9ecef);
+            box-shadow: 3px 3px 10px rgba(0,0,0,0.1),
+                      -3px -3px 10px rgba(255,255,255,0.8);
+        }
+
+        /* 聚焦状态 */
+        .custom-select:focus {
+            outline: none;
+            background: linear-gradient(145deg, #ffffff, #f0f0f0);
+            box-shadow: inset 3px 3px 6px rgba(0,0,0,0.1),
+                      inset -3px -3px 6px rgba(255,255,255,0.8);
+        }
+
+        /* 自定义下拉箭头 */
+        .select-container::after {
+            content: "▼";
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #3498db;
+            font-size: 12px;
+            pointer-events: none;
+            transition: transform 0.3s ease;
+        }
+
+        /* 展开动画 */
+        .custom-select:focus ~ .select-container::after {
+            transform: translateY(-50%) rotate(180deg);
+        }
+
+        /* 选项样式 */
+        .custom-select option {
+            padding: 15px 20px;
+            background: #ffffff;
+            color: #2c3e50;
+            border-bottom: 1px solid #ecf0f1;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 480px) {
+            .custom-select {
+                padding: 12px 40px 12px 15px;
+                font-size: 14px;
+            }
+        }
+
+        /* 高级玻璃拟态效果（可选） */
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .fixed-button {
+    position: fixed;     /* 固定定位 */
+    bottom: 20px;       /* 距离底部20px */
+    right: 20px;        /* 距离右侧20px */
+    padding: 15px 30px; /* 按钮内边距 */
+    background-color: #vewda; /* 背景颜色 */
+    color: white;       /* 文字颜色 */
+    border: none;       /* 移除边框 */
+    border-radius: 5px; /* 圆角边框 */
+    cursor: pointer;    /* 鼠标手势 */
+    font-size: 16px;    /* 文字大小 */
+    z-index: 1000;      /* 确保在最上层 */
+    transition: background-color 0.3s; /* 颜色过渡效果 */
+}
+
+/* 悬停效果 */
+.fixed-button:hover {
+    background-color: #ve; /* 更深的绿色 */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2); /* 添加阴影 */
+}
+
+  </style>
+</head>
+
+<body>
+<a href="newmain.html"<button class="fixed-button">返回首页</button></a>
+
+  <div class="main">
+
+    <img src="img/syx.jpg" width="130" height="130" alt="avatar">
+    <h1>个人主页</h1>
+    <h2>愿您的疾病早日康复</h2>
+
+    <ul>
+      
+      
+      	<script>
+function redirectToDiseasePage(select) {
+    const selectedValue = select.value;
+    if (selectedValue) {
+        window.location.href = selectedValue;
+        // 如果要新标签页打开可以使用：
+        // window.open(selectedValue, '_blank');
+    }
+}
+</script>
+
+<div class="select-container">
+        
+       <select class="custom-select glass-effect" onchange="location = this.value;">
+    <option value="" disabled selected>请选择疾病类型</option> <!-- 新增的默认提示 -->
+    <option value="changweiyan.html">肠胃炎</option>
+    <option value="tangniaobing.html">糖尿病</option>
+    <option value="gaoxueya.html">高血压</option>
+</select>
+    </div>
+      
+    </ul>
+
+  </div>
+</body>
+<script>
+//按键触发 
+ 
+ document.onkeydown = function(){
+            //禁止 ctrl+u
+            if (event.ctrlKey && window.event.keyCode==85){
+                return false;
+            }
+            //禁止 F12
+            if (window.event && window.event.keyCode == 123) {
+                event.keyCode = 0;
+                event.returnValue = false;
+            }
+     }
+ 
+   //如果还要禁止其他键的话搜 window.event.keyCode的对照表
+ 
+ 
+//网站禁止右键
+        document.body.oncontextmenu = function() {
+            self.event.returnValue=false
+        };
+ 
+// 禁用右键菜单、复制、选择
+     $(document).bind("contextmenu copy selectstart", function() {
+            return false;
+     });
+ 
+</script>
+</html>

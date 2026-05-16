@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>养生萝卜羊肉汤</title>
+    <link rel="stylesheet" href="img/lbyr.jpg">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+        }
+
+        body {
+            background: #f5f3f0;
+            line-height: 1.6;
+            color: #444;
+        }
+
+        .nav {
+            background: #2c2c2c;
+            padding: 1.2rem 10%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+
+        .nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1.5rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav a:hover {
+            color: #ff7f50;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 80px auto 40px;
+            padding: 0 20px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 4rem 0;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('img/lbyr.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+        }
+
+        h1 {
+            font-size: 3.2rem;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+            font-family: 'Georgia', serif;
+        }
+
+        .section {
+            background: white;
+            padding: 2.5rem;
+            margin: 2rem 0;
+            border-radius: 10px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+        }
+
+        h2 {
+            color: #e67e22;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #eee;
+            font-size: 2rem;
+        }
+
+        .ingredients-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .step-list li {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .step-list li::before {
+            content: "▹";
+            color: #e67e22;
+            position: absolute;
+            left: 0;
+        }
+
+        .history-box {
+            background: #fff9f2;
+            padding: 1.5rem;
+            border-left: 4px solid #e67e22;
+            margin: 1.5rem 0;
+        }
+
+        .nutrition-card {
+            background: #f8f8f8;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .nav {
+                padding: 1rem;
+                text-align: center;
+            }
+            
+            .nav a {
+                margin: 0 0.8rem;
+                display: inline-block;
+                margin-bottom: 0.5rem;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <a href="#history">历史渊源</a>
+        <a href="#recipe">烹饪方法</a>
+        <a href="#benefits">养生功效</a>
+        <a href="index.html">返回首页</a>
+    </nav>
+
+    <div class="container">
+        <div class="hero">
+            <h1>养生萝卜羊肉汤</h1>
+            <p>千年药膳智慧，冬日进补首选</p>
+        </div>
+
+        <section class="section" id="history">
+            <h2><i class="fas fa-history"></i> 历史传承</h2>
+            <div class="history-box">
+                <p>源自汉代医书《金匮要略》记载的经典药膳配方，历经千年演变。元代忽思慧在《饮膳正要》中特别记载："羊肉性温，助元阳，补虚劳..."。明清时期成为宫廷冬季御膳，后传入民间，现为国家级非物质文化遗产代表性项目。</p>
+            </div>
+        </section>
+
+        <section class="section" id="recipe">
+            <h2><i class="fas fa-utensils"></i> 经典做法</h2>
+            <div class="ingredients-grid">
+                <div class="nutrition-card">
+                    <h3>材料准备（4人份）</h3>
+                    <ul class="step-list">
+                        <li>新鲜羊腿肉 800g</li>
+                        <li>白萝卜 500g</li>
+                        <li>老姜 50g</li>
+                        <li>宁夏枸杞 15g</li>
+                    </ul>
+                </div>
+                <div class="nutrition-card">
+                    <h3>烹饪步骤</h3>
+                    <ol class="step-list">
+                        <li>羊肉冷水下锅，加料酒焯水去腥</li>
+                        <li>砂锅文火慢炖2小时</li>
+                        <li>加入萝卜续炖30分钟</li>
+                        <li>最后撒入枸杞焖煮5分钟</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="benefits">
+            <h2><i class="fas fa-heartbeat"></i> 养生功效</h2>
+            <div class="nutrition-card">
+                <h3>营养解析（每100g）</h3>
+                <p>▸ 热量：98kcal &nbsp; ▸ 蛋白质：18g<br>
+                ▸ 维生素C：15mg &nbsp; ▸ 铁元素：3.2mg</p>
+            </div>
+            <p>中医认为：羊肉温补气血，萝卜消食化痰，二者结合达到「补而不燥」的养生效果。现代营养学证实，富含的肌氨酸和维生素B群能有效增强体力，特别适合寒冷季节食用。</p>
+        </section>
+    </div>
+</body>
+</html>

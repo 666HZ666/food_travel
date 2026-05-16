@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>高血压健康饮食指南</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: '微软雅黑', sans-serif;
+        }
+
+        body {
+            background-color: #f0f7f0;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #2c5f2d;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #97bc62;
+            padding: 1rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .food-category {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .food-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .food-item {
+            padding: 1rem;
+            border-left: 4px solid #2c5f2d;
+            background-color: #f8fff8;
+        }
+
+        footer {
+            background-color: #2c5f2d;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>高血压健康饮食指南</h1>
+        <p>科学饮食，健康生活</p>
+    </header>
+
+    <nav>
+        <ul>
+            
+            <li><a href="gerenzhuye.html">返回主页</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <section id="vegetables" class="food-category">
+            <h2>推荐蔬菜</h2>
+            <div class="food-list">
+                <div class="food-item">
+                    <h3>菠菜</h3>
+                    <p>富含钾、镁和膳食纤维，有助于降低血压</p>
+                </div>
+                <div class="food-item">
+                    <h3>西兰花</h3>
+                    <p>含硫化合物和类黄酮，有助于心血管健康</p>
+                </div>
+                <!-- 更多蔬菜... -->
+            </div>
+        </section>
+
+        <section id="fruits" class="food-category">
+            <h2>推荐水果</h2>
+            <div class="food-list">
+                <div class="food-item">
+                    <h3>香蕉</h3>
+                    <p>丰富的钾元素有助于平衡钠含量</p>
+                </div>
+                <div class="food-item">
+                    <h3>蓝莓</h3>
+                    <p>富含抗氧化剂，改善血管功能</p>
+                </div>
+                <!-- 更多水果... -->
+            </div>
+        </section>
+
+        <section id="grains" class="food-category">
+            <h2>全谷物推荐</h2>
+            <div class="food-list">
+                <div class="food-item">
+                    <h3>燕麦</h3>
+                    <p>β-葡聚糖有助于降低胆固醇</p>
+                </div>
+                <div class="food-item">
+                    <h3>糙米</h3>
+                    <p>富含膳食纤维和镁元素</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="avoid" class="food-category">
+            <h2>应避免的食物</h2>
+            <div class="food-list">
+                <div class="food-item" style="border-color: #ff4444;">
+                    <h3>加工肉类</h3>
+                    <p>高钠含量，可能含有硝酸盐</p>
+                </div>
+                <div class="food-item" style="border-color: #ff4444;">
+                    <h3>罐头食品</h3>
+                    <p>通常含有大量防腐剂和钠</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+   
+</body>
+</html>

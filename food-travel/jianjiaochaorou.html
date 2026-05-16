@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>湘味尖椒炒肉</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* 保持基础样式一致 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+        }
+
+        body {
+            background: #f5f3f0;
+            line-height: 1.6;
+            color: #444;
+        }
+
+        .nav {
+            background: #2c2c2c;
+            padding: 1.2rem 10%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+
+        .nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1.5rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav a:hover {
+            color: #ff4757;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 80px auto 40px;
+            padding: 0 20px;
+        }
+
+        /* 定制化视觉元素 */
+        .hero {
+            text-align: center;
+            padding: 4rem 0;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/jjcr.jpeg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 3.2rem;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+            font-family: 'Georgia', serif;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .section {
+            background: white;
+            padding: 2.5rem;
+            margin: 2rem 0;
+            border-radius: 10px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-3px);
+        }
+
+        h2 {
+            color: #ff6b6b;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #eee;
+            font-size: 2rem;
+        }
+
+        .ingredient-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .timeline {
+            border-left: 3px solid #ff6b6b;
+            padding-left: 2rem;
+            margin: 2rem 0;
+        }
+
+        .timeline-item {
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: "";
+            width: 12px;
+            height: 12px;
+            background: #ff6b6b;
+            position: absolute;
+            left: -2.8rem;
+            top: 5px;
+            border-radius: 50%;
+        }
+
+        .nutrition-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+
+        .nutrition-table td {
+            padding: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .nutrition-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        @media (max-width: 768px) {
+            .nav {
+                padding: 1rem;
+                text-align: center;
+            }
+            
+            .nav a {
+                margin: 0 0.8rem;
+                display: inline-block;
+                margin-bottom: 0.5rem;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <a href="#origin">源起</a>
+        <a href="#technique">技法</a>
+        <a href="#nutrition">营养</a>
+        <a href="index.html">返回首页</a>
+    </nav>
+
+    <div class="container">
+        <div class="hero">
+            <h1>湘味尖椒炒肉</h1>
+            <p>火辣传承三百年，湖湘味觉图腾</p>
+        </div>
+
+        <section class="section" id="origin">
+            <h2><i class="fas fa-seedling"></i> 源起脉络</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>清乾隆年间</h3>
+                    <p>湘潭码头工人创制，早期使用肥膘肉与野山椒快速爆炒，成为劳动阶层补充能量的经典菜式</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>民国时期</h3>
+                    <p>经玉楼东酒家改良，选用宁乡花猪肉与衡东黄贡椒，确立现代标准做法</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>2008年</h3>
+                    <p>入选湖南省非物质文化遗产名录，确立其饮食文化地位</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="technique">
+            <h2><i class="fas fa-fire"></i> 爆炒秘技</h2>
+            <div class="ingredient-grid">
+                <div class="section" style="background:#fff5f5;">
+                    <h3>原料标准</h3>
+                    <ul class="timeline">
+                        <li class="timeline-item">宁乡花猪五花肉 300g</li>
+                        <li class="timeline-item">衡东黄贡椒 200g</li>
+                        <li class="timeline-item">永丰辣酱 15g</li>
+                        <li class="timeline-item">茶油 30ml</li>
+                    </ul>
+                </div>
+                <div class="section" style="background:#f8fff5;">
+                    <h3>关键步骤</h3>
+                    <ol class="timeline">
+                        <li class="timeline-item">猪肉冷锅煸炒出油</li>
+                        <li class="timeline-item">辣椒干煸至虎皮状</li>
+                        <li class="timeline-item">猛火颠炒20秒出锅</li>
+                        <li class="timeline-item">铸铁锅保温上桌</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="nutrition">
+            <h2><i class="fas fa-chart-bar"></i> 营养解析</h2>
+            <table class="nutrition-table">
+                <tr>
+                    <td>热量</td>
+                    <td>215kcal/100g</td>
+                    <td>维生素C</td>
+                    <td>62mg</td>
+                </tr>
+                <tr>
+                    <td>辣椒素</td>
+                    <td>150 SHU</td>
+                    <td>蛋白质</td>
+                    <td>18.5g</td>
+                </tr>
+            </table>
+            <p>▪️ 促进代谢：辣椒素加速15-20%的基础代谢率<br>
+               ▪️ 肌肉维护：优质动物蛋白含必需氨基酸<br>
+               ▪️ 味觉唤醒：刺激唾液淀粉酶分泌达300%</p>
+        </section>
+    </div>
+</body>
+</html>

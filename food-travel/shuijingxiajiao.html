@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>粤点雅韵 - 广式早茶文化</title>
+    <link href="" rel="stylesheet">
+    <link rel="stylesheet" href="">
+    <style>
+        :root {
+            --primary-color: #c62828;
+            --secondary-color: #f5e6ca;
+            --accent-color: #d4a656;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--secondary-color);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .nav-container {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255,255,255,0.95);
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .nav-links a {
+            margin-left: 2rem;
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .history-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .history-image {
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+        }
+
+        .history-image:hover {
+            transform: scale(1.02);
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+        }
+
+        .dimsum-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .dimsum-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .dimsum-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card-image {
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .recipe-section {
+            background: white;
+            padding: 4rem 2rem;
+        }
+
+        .recipe-step {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            background: var(--secondary-color);
+            border-radius: 10px;
+        }
+
+        .step-number {
+            font-size: 2rem;
+            color: var(--primary-color);
+            min-width: 60px;
+            text-align: center;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .history-section {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-container">
+        <nav>
+           
+            <div class="nav-links">
+            	
+                <a href="#history">历史渊源</a>
+                <a href="#gallery">点心鉴赏</a>
+                <a href="#recipe">制作工艺</a>
+                
+                <a href="index.html">返回首页</a>
+               
+            </div>
+        </nav>
+    </div>
+
+    <div class="hero">
+        <div class="hero-content">
+            <h1>一盅两件 广府至味</h1>
+            <p>品味岭南饮食文化的千年传承</p>
+        </div>
+    </div>
+
+    <section class="section" id="history">
+        <div class="history-section">
+            <div class="history-text">
+                <h2>茶楼往事</h2>
+                <p>广式早茶文化起源于清代咸丰同治年间，最初出现在广州的"二厘馆"。这种平民化的茶寮提供"一盅两件"——一盅粗茶，两件点心，成为劳苦大众的歇脚处。随着时间推移，茶楼逐渐发展成为重要的社交场所...</p>
+            </div>
+            <img src="img/gs.bmp" alt="传统茶楼" class="history-image">
+        </div>
+    </section>
+
+    <section class="section" id="gallery">
+        <h2>经典点心鉴赏</h2>
+        <div class="dimsum-gallery">
+            <div class="dimsum-card">
+                <div class="card-image" style="background-image: url('img/22.jpg')"></div>
+                <div class="card-content">
+                    <h3>水晶虾饺</h3>
+                    <p>传统粤点"四大天王"之首，虾饺，又称水晶饺，是广东省广州市的一种特色小吃，属于粤菜系，该菜品始创于20世纪初广州市郊伍村五凤乡的一间家庭式小茶楼，已经有百年历史；传统的虾饺是半月形、蜘蛛肚共有十二褶的，馅料有虾，有肉，有笋，味道鲜美爽滑，美味可口。 虾饺发展：黑松露虾饺、避风塘虾饺、工夫汤虾饺、水晶虾饺、子母虾饺等。</p>
+                </div>
+            </div>
+            <!-- 更多点心卡片 -->
+        </div>
+    </section>
+
+    <section class="recipe-section" id="recipe">
+        <div class="section">
+            <h2>传统虾饺制作工艺</h2>
+            <div class="recipe-step">
+                <div class="step-number">1</div>
+                <p>（虾馅）：将2/3的的虾肉剁成泥，1/3切成丁，胡萝卜切碎。剁成泥的虾泥中加入胡萝卜，加入盐、糖、姜、醋、胡椒粉搅拌均匀。</p>   
+            </div>
+            <div class="recipe-step">
+                <div class="step-number">2</div>
+                <p>然后把馅捞起，从一尺高的位置往碗里甩。重复20－30次，直至彻底搅上劲儿，下入植物油搅匀，放入冰箱冷冻15分钟。冷冻15分钟后，从冰箱取出，加入剩下的虾肉搅拌均匀，即可放入冰箱冷藏备用。</p>
+            </div>
+            <div class="recipe-step">
+                <div class="step-number">3</div>
+                <p>（虾皮）：准备好材料150克澄粉和10克木薯粉、盐混合拌匀，另外10克木薯粉暂放一边备用。烫面：向混合的粉中冲入沸水，边冲边用筷子搅成雪花状，尽量不要有干面，盖上盖子焖5分钟。</p>
+            </div>
+            <div class="recipe-step">
+                <div class="step-number">4</div>
+                <p>将烫面趁热揉搓均匀，分次拌入剩余的10克木薯粉。加入10克左右的猪油再揉，逐渐变成质地均匀的面团。</p>
+            </div>
+            <div class="recipe-step">
+                <div class="step-number">5</div>
+                <p>置于容器里，以湿布遮盖，醒发20分钟左右，然后取出一小块面团儿，搓成长条，拽成小剂子。</p>
+            </div>
+            <div class="recipe-step">
+                <div class="step-number">6</div>
+                <p>将小剂子面团搓圆、擀成圆皮儿。</p>
+            </div>
+            <div class="recipe-step">
+                <div class="step-number">7</div>
+                <p>（包法）：虾饺皮要尽可能的薄，越薄包出来的饺子越剔透，拿起饺子皮，近乎透明。</p>
+            </div>
+            <div class="recipe-step">
+                <div class="step-number">8</div>
+                <p>放入适量馅料，不要太多，以免在包制的时候撑破皮，或者蒸的时候爆裂，这个时候还是可以看见皮是非常薄的。</p>
+            </div>
+            <div class="recipe-step">
+                <div class="step-number">8</div>
+                <p>一只手推虾饺皮，一只手捏住推过来的皮子，成为皱褶，以此类推全部捏完，最后捏好后还要捏实一点，怕在蒸的时候裂开。</p>
+            </div>
+            <div class="recipe-step">
+                <div class="step-number">10</div>
+                <p>接下来锅中烧水开，将包好的虾饺码入铺油纸（或者红萝卜）的笼屉上，盖上盖子蒸制4－5分钟即可，火力不要开到最大，中偏大一点就好，太猛的火力虾饺皮容易裂开。</p>
+            </div>
+            <div class="recipe-step">
+                <div class="step-number">11</div>
+                <p>蒸制时间结束后，关火，取出虾饺放入盘中即可。</p>
+            </div>
+           
+        </div>
+    </section>
+
+</body>
+</html>
